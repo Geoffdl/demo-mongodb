@@ -2,6 +2,7 @@ package fr.diginamic.connection;
 
 import static com.mongodb.client.model.Filters.eq;
 
+import fr.diginamic.crud.Constant;
 import org.bson.Document;
 
 import com.mongodb.client.MongoClient;
@@ -9,20 +10,23 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-public class QuickStart {
-    public static void main( String[] args ) {
+public class QuickStart
+{
+    public static void main(String[] args)
+    {
+        String uri = Constant.DB_URL;
 
-        // Replace the placeholder with your MongoDB deployment's connection string
-        String uri = "mongodb+srv://root:root@cluster0.ednit.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
-        try (MongoClient mongoClient = MongoClients.create(uri)) {
+        try (MongoClient mongoClient = MongoClients.create(uri))
+        {
             MongoDatabase database = mongoClient.getDatabase("sample_mflix");
             MongoCollection<Document> collection = database.getCollection("movies");
 
             Document doc = collection.find(eq("title", "Back to the Future")).first();
-            if (doc != null) {
+            if (doc != null)
+            {
                 System.out.println(doc.toJson());
-            } else {
+            } else
+            {
                 System.out.println("No matching documents found.");
             }
         }

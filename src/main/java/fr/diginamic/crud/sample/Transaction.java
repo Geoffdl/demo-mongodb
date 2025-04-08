@@ -3,6 +3,7 @@ package fr.diginamic.crud.sample;
 import com.mongodb.client.*;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
+import fr.diginamic.crud.Constant;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
@@ -20,7 +21,7 @@ public class Transaction
      */
     public static void main(String[] args)
     {
-        String connectionString = "mongodb+srv://root:root@cluster0.ednit.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+        String connectionString = Constant.DB_URL;
         final MongoClient client = MongoClients.create(connectionString);
         final ClientSession clientSession = client.startSession();
 

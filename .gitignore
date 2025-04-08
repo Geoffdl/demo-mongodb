@@ -43,3 +43,4 @@ config.properties
 application.properties
 *.txt
 /.idea
+/logs
