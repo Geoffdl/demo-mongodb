@@ -21,7 +21,7 @@ public class Transaction
      */
     public static void main(String[] args)
     {
-        String connectionString = Constant.DB_URL;
+        String connectionString = Constant.MONGO_URI;
         final MongoClient client = MongoClients.create(connectionString);
         final ClientSession clientSession = client.startSession();
 

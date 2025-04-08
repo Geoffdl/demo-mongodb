@@ -23,7 +23,7 @@ public class MongoConnection
     {
         if (mongoClient == null)
         {
-            ConnectionString connectionString = new ConnectionString(Constant.DB_URL);
+            ConnectionString connectionString = new ConnectionString(Constant.MONGO_URI);
             MongoClientSettings settings = MongoClientSettings.builder()
                     .applyConnectionString(connectionString)
                     .serverApi(ServerApi.builder()

@@ -1,4 +1,4 @@
-package fr.diginamic.connection;
+package fr.diginamic.connection.sample;
 
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 import static com.mongodb.client.model.Filters.eq;
@@ -23,7 +23,7 @@ public class QuickStartPojoExample
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true).build();
         CodecRegistry pojoCodecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
 
-        String uri = Constant.DB_URL;
+        String uri = Constant.MONGO_URI;
 
         try (MongoClient mongoClient = MongoClients.create(uri))
         {

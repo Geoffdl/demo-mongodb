@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class Constant
 {
-    public static final String DB_URL = loadMongoURI();
+    public static final String MONGO_URI = loadMongoURI();
 
 
     private static String loadMongoURI() {

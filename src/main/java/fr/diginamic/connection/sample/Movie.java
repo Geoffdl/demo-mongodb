@@ -1,4 +1,4 @@
-package fr.diginamic.connection;
+package fr.diginamic.connection.sample;
 
 import java.util.List;
 

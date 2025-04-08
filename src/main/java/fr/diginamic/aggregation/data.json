@@ -1,0 +1,21 @@
+[
+  {
+    "$match": {
+      "balance": {
+        "$gt": 1000
+      }
+    }
+  },
+  {
+    "$project": {
+      "_id": 0,
+      "account_holder": {
+        "$toUpper": "$account_holder"
+      },
+      "balance": 1,
+      "account_type": {
+        "$toUpper": "$account_type"
+      }
+    }
+  }
+]

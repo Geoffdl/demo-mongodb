@@ -1,4 +1,4 @@
-package fr.diginamic.connection;
+package fr.diginamic.connection.sample;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -14,7 +14,7 @@ public class QuickStart
 {
     public static void main(String[] args)
     {
-        String uri = Constant.DB_URL;
+        String uri = Constant.MONGO_URI;
 
         try (MongoClient mongoClient = MongoClients.create(uri))
         {
